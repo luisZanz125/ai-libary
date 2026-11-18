@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#11111b"><meta name="description" content="PROMPTVERSE — deine Bibliothek für KI-Skills, Prompts, Agents und Workflows.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="assets/style.css">
+<title>PROMPTVERSE — AI Library</title>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">✳</span><span>PROMPTVERSE<small>AI RESOURCE LIBRARY</small></span></a><div class="top-actions"><button id="themeBtn" class="icon-btn" aria-label="Farbschema wechseln">◐</button><a class="github-link" href="https://github.com/luisZanz125/ai-libary" target="_blank" rel="noreferrer">GitHub ↗</a></div></header>
+<main class="shell">
+<section class="hero"><div class="eyebrow">YOUR AI WORKSPACE</div><h1>Finde deinen nächsten<br><span>Durchbruch.</span></h1><p>Skills, Prompts, Agents und Workflows — organisiert an einem Ort.</p><div class="hero-stats"><div><b id="totalCount">0</b><small>RESSOURCEN</small></div><div><b id="skillCount">0</b><small>SKILLS</small></div><div><b id="promptCount">0</b><small>PROMPTS</small></div></div></section>
+<section class="toolbar"><label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Suche nach Name, Beschreibung oder Tag…" aria-label="Bibliothek durchsuchen"><kbd> / </kbd></label><button id="addBtn" class="primary">＋ Neu erstellen</button></section>
+<nav class="filters" id="filters" aria-label="Ressourcentypen"><button class="filter active" data-type="all">Alle</button><button class="filter" data-type="skill">Skills</button><button class="filter" data-type="prompt">Prompts</button><button class="filter" data-type="agent">Agents</button><button class="filter" data-type="workflow">Workflows</button><button class="filter" data-type="template">Templates</button><button class="filter" data-type="favorite">♥ Favoriten</button></nav>
+<section class="library-head"><div><div class="eyebrow">COLLECTION</div><h2 id="sectionTitle">Alle Ressourcen</h2></div><select id="sortSelect" aria-label="Sortierung"><option value="recent">Zuletzt hinzugefügt</option><option value="az">Name A–Z</option></select></section>
+<section id="resourceGrid" class="grid" aria-live="polite"></section>
+<footer><span>PROMPTVERSE <b>3.1</b></span><span>Deine Daten bleiben in diesem Browser gespeichert.</span></footer>
+</main>
+<dialog id="editor"><form method="dialog" id="resourceForm"><div class="modal-head"><div><div class="eyebrow">RESOURCE EDITOR</div><h2 id="editorTitle">Neue Ressource</h2></div><button class="icon-btn" value="cancel" aria-label="Schließen">×</button></div><input type="hidden" id="editId"><label>Titel<input id="titleInput" required maxlength="90" placeholder="z. B. Python Debugging Skill"></label><label>Typ<select id="typeInput"><option value="skill">Skill</option><option value="prompt">Prompt</option><option value="agent">Agent</option><option value="workflow">Workflow</option><option value="template">Template</option></select></label><label>Beschreibung<input id="descriptionInput" maxlength="180" placeholder="Wofür ist diese Ressource?"></label><label>Tags <small>(mit Komma trennen)</small><input id="tagsInput" placeholder="coding, python, debug"></label><label>Inhalt<textarea id="contentInput" rows="9" placeholder="Füge hier den vollständigen Skill oder Prompt ein…" required></textarea></label><div class="modal-actions"><button type="button" id="deleteBtn" class="danger hidden">Löschen</button><span></span><button value="cancel" class="secondary">Abbrechen</button><button id="saveBtn" value="default" class="primary">Speichern</button></div></form></dialog>
+<script src="assets/app.js"></script>
+</body></html>
